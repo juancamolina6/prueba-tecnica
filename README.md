@@ -12,7 +12,7 @@ Este proyecto consiste en crear un sistema de visualización de la demanda de en
 ```
 /backend
   └── app.py
-  └── demanda.csv
+  └── demanda_sin_dia.csv.csv
   └── requirements.txt
 
 /frontend
