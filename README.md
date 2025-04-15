@@ -12,7 +12,7 @@ Este proyecto consiste en crear un sistema de visualización de la demanda de en
 ```
 /backend
   └── app.py
-  └── demanda_sin_dia.csv.csv
+  └── demanda_sin_dia.csv
   └── requirements.txt
 
 /frontend
@@ -102,6 +102,6 @@ Devuelve los datos de demanda filtrados por fecha a partir de hoy hacia atrás, 
 
 ## 📝 Instrucciones para Entrega
 
-1. Sube tu proyecto a un repositorio público o privado (GitHub, GitLab, etc.).
-2. Comparte el enlace del repositorio.
+1. Sube tu proyecto a un repositorio público (GitHub, GitLab, etc.).
+2. Realizar un pull-requests al repositorio base con tu solución
 3. Asegúrate de que las instrucciones de instalación y ejecución estén claras y funcionen.
