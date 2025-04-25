@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { LineChart, Line, XAxis, YAxis, Tooltip, CartesianGrid, ResponsiveContainer } from 'recharts'
 
 
@@ -10,7 +10,7 @@ export default function App() {
   useEffect(() => {
     setLoading(true);
     fetch(`/api/demanda?range=${range}`)
-      .then(res =>{
+      .then(res => {
         if (!res.ok) {
           throw new Error(`API error: ${res.status}`);
         }
@@ -62,22 +62,24 @@ export default function App() {
           </div>
 
           {/* Tabla de datos */}
-          <table className="w-full mt-4 border-collapse">
-            <thead>
-              <tr>
-                <th className="border px-2 py-1">Fecha</th>
-                <th className="border px-2 py-1">Demanda</th>
-              </tr>
-            </thead>
-            <tbody>
-              {data.map(({ date, value }) => (
-                <tr key={date}>
-                  <td className="border px-2 py-1">{date}</td>
-                  <td className="border px-2 py-1">{value}</td>
+          <div className="table-wrapper mt-4">
+            <table className="excel-table">
+              <thead>
+                <tr>
+                  <th>Fecha</th>
+                  <th>Demanda</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                {data.map(({ date, value }) => (
+                  <tr key={date}>
+                    <td>{date}</td>
+                    <td>{value.toLocaleString()}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </>
       )}
     </div>
